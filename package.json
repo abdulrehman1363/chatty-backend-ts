@@ -2,14 +2,15 @@
   "name": "chatty-backend",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon ./build/app.js",
     "dev": "nodemon -r tsconfig-paths/register src/app.ts | bunyan",
     "lint:check": "eslint \"src/**/*.ts\"",
     "lint:fix": "eslint \"src/**/*.ts\" --fix",
     "prettier:check": "prettier --check 'src/**/*.{ts,json}'",
-    "prettier:fix": "prettier --write 'src/**/*.{ts,json}'"
+    "prettier:fix": "prettier --write 'src/**/*.{ts,json}'",
+    "build": "tspc -p ."
   },
   "keywords": [],
   "author": "",
@@ -29,7 +30,10 @@
     "mongoose": "^8.5.3",
     "redis": "^4.7.0",
     "socket.io": "^4.7.5",
-    "typescript": "^5.5.4"
+    "ts-patch": "^3.2.1",
+    "ttypescript": "^1.5.15",
+    "typescript": "^5.5.4",
+    "typescript-transform-paths": "^3.5.0"
   },
   "devDependencies": {
     "@types/bunyan": "^1.8.11",

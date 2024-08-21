@@ -1,10 +1,9 @@
-// eslint.config.js (ESLint 9.x with flat config)
-import typescriptParser from '@typescript-eslint/parser';
-import typescriptPlugin from '@typescript-eslint/eslint-plugin';
-import prettierPlugin from 'eslint-plugin-prettier';
-import prettierConfig from 'eslint-config-prettier';
+// eslint.config.js (CommonJS syntax)
+const typescriptParser = require('@typescript-eslint/parser');
+const typescriptPlugin = require('@typescript-eslint/eslint-plugin');
+const prettierPlugin = require('eslint-plugin-prettier');
 
-export default [
+module.exports = [
   {
     files: ['src/**/*.ts'], // Specify the files you want to lint
     languageOptions: {
@@ -92,6 +91,7 @@ export default [
       '.pnp.*',
       '.webpack/**',
       '.svelte-kit/**',
+      "build"
     ],
   },
 ];
